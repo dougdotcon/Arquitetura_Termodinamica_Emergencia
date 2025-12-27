@@ -78,14 +78,17 @@ def run_hysteresis_loop(h_range, T):
     N = GRID_SIZE
     grid = np.random.choice(np.array([-1, 1], dtype=np.int8), size=(N, N))
     
-    magnetizations = []
+    n_steps = len(h_range)
+    magnetizations = np.zeros(2 * n_steps)
     
     # Forward path
+    idx = 0
     for h in h_range:
         for _ in range(100): # Equilibrate faster
             metropolis_step(grid, T, h)
         m = np.sum(grid) / (N*N)
-        magnetizations.append(m)
+        magnetizations[idx] = m
+        idx += 1
         
     # Backward path
     h_reversed = h_range[::-1]
@@ -93,9 +96,10 @@ def run_hysteresis_loop(h_range, T):
         for _ in range(100):
             metropolis_step(grid, T, h)
         m = np.sum(grid) / (N*N)
-        magnetizations.append(m)
+        magnetizations[idx] = m
+        idx += 1
         
-    return np.concatenate((h_range, h_reversed)), np.array(magnetizations), grid
+    return np.concatenate((h_range, h_reversed)), magnetizations, grid
 
 def plot_hysteresis(h_values, m_values, T):
     plt.figure(figsize=(10, 6))
