@@ -3,43 +3,43 @@
 **Institute:** Advanced Research in Complex Systems
 **Principle:** "Information is Physical" (Landauer)
 
-Este repositório contém a implementação computacional e a fundamentação teórica da **Teoria da Emergência Termodinâmica**, que unifica Gravidade, Dinâmica Social e Consciência sob um único formalismo matemático baseado na Entropia.
+This repository contains the computational implementation and theoretical foundation of the **Thermodynamic Emergence Framework**, which unifies Gravity, Social Dynamics, and Consciousness under a single mathematical formalism based on Entropy.
 
-## 📄 Documentação Central
+## 📄 Core Documentation
 
-*   [**TEORIA_UNIFICADA.md**](./TEORIA_UNIFICADA.md): A resolução formal do conflito entre Relatividade Geral e Mecânica Quântica via Gravidade Entrópica.
-*   [**OBJETIVO_DE_PESQUISA.md**](./OBJETIVO_DE_PESQUISA.md): O manifesto original e o status de validação das hipóteses (Dezembro/2025).
+*   [**UNIFIED_THEORY.md**](./UNIFIED_THEORY.md): The formal resolution of the General Relativity vs. Quantum Mechanics conflict via Entropic Gravity.
+*   [**RESEARCH_OBJECTIVE.md**](./RESEARCH_OBJECTIVE.md): The original manifesto and hypothesis validation status (December 2025).
 
-## 🔬 Módulos de Pesquisa
+## 🔬 Research Modules
 
-O projeto divide-se em três escalas de emergência, cada uma em seu próprio subdiretório:
+The project is divided into three scales of emergence, each in its own subdirectory:
 
-### 1. Escala Cósmica: `Gravidade_Entropica/`
-Simulações astrofísicas testando a hipótese da gravidade emergente.
-*   **Foco:** Rotação de Galáxias, Cosmologia sem Matéria Escura.
-*   **Códigos Chave:** `src/rotacao_galactica.py`, `src/simulacao_galaxia.py`.
+### 1. Cosmic Scale: `Entropic_Gravity/`
+Astrophysical simulations testing the emergent gravity hypothesis.
+*   **Focus:** Galaxy Rotation Curves, Cosmology without Dark Matter.
+*   **Key Codes:** `src/rotacao_galactica.py`, `src/simulacao_galaxia.py`.
 
-### 2. Escala Macro-Social: `Horizontes_de_Eventos_Sociais/`
-Modelagem de sociedades como sistemas de spin (Modelo de Ising) sob influência de campos de informação.
-*   **Foco:** Histerese política, polarização, totalitarismo como estado de baixa entropia.
+### 2. Macro-Social Scale: `Social_Event_Horizons/`
+Modeling societies as spin systems (Ising Model) under influence of information fields.
+*   **Focus:** Political hysteresis, polarization, totalitarianism as a low-entropy state.
 
-### 3. Escala Micro-Consciente: `Acoplamento_Intercerebral/`
-Neurociência computacional focada em sincronização de fase.
-*   **Foco:** Consciência como transição de fase em osciladores acoplados (Kuramoto).
+### 3. Micro-Conscious Scale: `Interbrain_Coupling/`
+Computational neuroscience focused on phase synchronization.
+*   **Focus:** Consciousness as a phase transition in coupled oscillators (Kuramoto).
 
-## 🚀 Como Executar as Simulações
+## 🚀 How to Run Simulations
 
-Recomenda-se ambiente Python 3.9+ com suporte a computação científica.
+We recommend a Python 3.9+ environment with scientific computing support.
 
 ```bash
-# Instalar dependências (exemplo genérico)
+# Install dependencies (generic example)
 pip install numpy scipy matplotlib astropy jupyter
 
-# Executar a validação da curva de rotação galáctica
-cd Gravidade_Entropica/src
+# Run the validation of galactic rotation curves
+cd Entropic_Gravity/src
 python rotacao_galactica.py
 ```
 
-## ⚠️ Nota Epistemológica
+## ⚠️ Epistemological Note
 
-Este repositório adota a metodologia *Code-First Physics*. Teorias não implementáveis em código são consideradas incompletas. A validação numérica tem precedência sobre a elegância analítica.
+This repository adopts the **Code-First Physics** methodology. Theories that cannot be implemented in code are considered incomplete. Numerical validation takes precedence over analytical elegance.

@@ -50,7 +50,7 @@ We employ the **Metropolis-Hastings algorithm** to simulate the probabilistic ev
 
 ## Project Structure
 
-
+```
 IdeologicalEventHorizon/
 ├── README.md                    # Project documentation (this file)
 ├── requirements.txt             # Python dependencies
@@ -62,8 +62,8 @@ IdeologicalEventHorizon/
 │   ├── social_phase_analysis.png  # Phase diagram (M, χ, C vs T, H)
 │   └── manipulation_effect.png    # Hysteresis and control plots
 └── docs/
-    └── theoretical_basis.pdf    # Mathematical proofs and theory
-
+│   └── scientific_report.md     # Mathematical proofs and theory
+```
 
 ## Installation & Usage
 
@@ -74,17 +74,17 @@ IdeologicalEventHorizon/
 
 ### Setup
 
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 ### Running the Simulation
 
 To generate the phase diagram and simulation data:
 
-bash
+```bash
 python src/ising_social_simulation.py
-
+```
 
 ## Theory & Interpretation
 

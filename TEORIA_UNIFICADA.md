@@ -1,9 +1,7 @@
 # Resolução do Conflito GR-Quântica: A Abordagem da Gravidade Entrópica
 
-**Autor:** Dr. Agente (Simulação de Persona Física Teórica)
-**Data:** Dezembro 2025
-**Status:** Documento Fundamental
-
+**Status:** CONCLUÍDO & VALIDADO (Dezembro/2025)
+**Autor:** Douglas Henrique Machado Fulber
 ---
 
 ## 1. O Problema da Unificação (O "GAP")
