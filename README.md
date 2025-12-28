@@ -55,6 +55,17 @@ Detailed audit scripts and reports are available in: `Entropy/Entropic_Gravity/V
 
 ---
 
+## Interactive Demo
+
+### Three.js Visualization
+Watch the interactive 3D simulation of the thermodynamic architecture in action:
+
+https://github.com/user-attachments/assets/threejs.mp4
+
+> **Note:** This visualization demonstrates the entropic field dynamics and emergent gravitational behavior in a three-dimensional interactive environment.
+
+---
+
 ## Research Modules
 
 The project is divided into three scales of emergence, each in its own subdirectory:
