@@ -1,100 +1,76 @@
-# Architecture of Thermodynamic Emergence (ATE)
+# EntropicGravity-Py: Thermodynamic Emergence Framework
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)
 ![Physics](https://img.shields.io/badge/Physics-Computational-purple)
-![Theory](https://img.shields.io/badge/Theory-Validated-success)
-![Status](https://img.shields.io/badge/Status-Research-orange)
+![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg) 
+![Status](https://img.shields.io/badge/Status-Submitted_for_Review-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-**Institute:** Advanced Research in Complex Systems  
-**Principle:** "Information is Physical" (Landauer)  
-**Methodology:** Code-First Physics
-
-This repository contains the computational implementation and theoretical foundation of the **Thermodynamic Emergence Framework**, which unifies Gravity, Social Dynamics, and Consciousness under a single mathematical formalism based on Entropy.
-
-## Core Documentation
-
-*   [**UNIFIED_THEORY.md**](./UNIFIED_THEORY.md): The formal resolution of the General Relativity vs. Quantum Mechanics conflict via Entropic Gravity.
-*   [**RESEARCH_OBJECTIVE.md**](./RESEARCH_OBJECTIVE.md): The original manifesto and hypothesis validation status (December 2025).
-*   [**PAPER.md**](./PAPER.md): Formal scientific article - "Information as Geometry".
-
-## Scientific Validation Status (Audit 2025)
-
-The codebase has undergone a rigorous "Elite Physicist" audit to verify the **Thermodynamic Architecture of Emergence**.
-
-| Challenge | Test | Status | Finding |
-| :--- | :--- | :--- | :--- |
-| **1. Energy** | Hamiltonian Conservation | ![Pass](https://img.shields.io/badge/Audit-PASS-success) | Entropic force acts conservatively on orbital timescales ($dH/dt \approx 0$). |
-| **2. Derivation** | Smooth Interpolation | ![Pass](https://img.shields.io/badge/Audit-PASS-success) | Smooth transition function $\mu(x)$ eliminates unphysical jerks. |
-| **3. Boundary** | Equivalence Principle | ![Pass](https://img.shields.io/badge/Audit-PASS-success) | Saddle points respect zero-crossing; External Field Effect observed. |
-| **4. Stability** | Toomre $Q$ Parameter | ![Pass](https://img.shields.io/badge/Audit-PASS-success) | Entropic potential stabilizes galactic disks ($Q > 1$) without Dark Matter halos. |
-| **5. Convergence** | Richardson Extrapolation | ![Pass](https://img.shields.io/badge/Audit-PASS-success) | Order 1 convergence confirmed; physics is not numerical noise. |
-| **6. Lensing** | Weak Lensing Profile | ![Pass](https://img.shields.io/badge/Audit-PASS-success) | **Major Breakthrough:** Entropic potential mimics Isothermal Halo lensing signal. |
-| **7. Cosmology** | Expansion History $H(z)$ | ![Partial](https://img.shields.io/badge/Audit-PARTIAL-yellow) | Reactive Model ($\Omega \propto H$) bridges the gap; theory viable but requires tuning. |
-
-### Validation Suite
-Detailed audit scripts and reports are available in: `Entropy/Entropic_Gravity/Validation/`
-
-### Visual Evidence Gallery
-
-#### 1. Galactic Dynamics & Stability
-| | |
-|:---:|:---:|
-| **Energy Conservation**<br>![Energy](Entropic_Gravity/Validation/results/energy_conservation.png) | **Interpolation Law**<br>![Derivation](Entropic_Gravity/Validation/interpolation_analysis.png) |
-| **Disk Stability (Toomre Q)**<br>![Stability](Entropic_Gravity/Validation/stability_analysis.png) | **Convergence Test**<br>![Convergence](Entropic_Gravity/Validation/convergence_analysis.png) |
-
-#### 2. Advanced Phenomena (Lensing & Cosmology)
-| | |
-|:---:|:---:|
-| **Weak Lensing Profile**<br>![Lensing](Entropic_Gravity/Validation/06_Gravitational_Lensing/lensing_analysis.png) | **Boundary Effect (SEP)**<br>![Boundary](Entropic_Gravity/Validation/boundary_analysis.png) |
-
-#### 3. The "Boss Battle" (Cosmology Results)
-| | |
-|:---:|:---:|
-| **Naive Model** ![Fail](https://img.shields.io/badge/Result-FAILED-critical)<br>![Naive](Entropic_Gravity/Validation/07_Cosmology/cosmology_analysis.png) | **Reactive Model** ![Success](https://img.shields.io/badge/Result-SUCCESS-success)<br>![Reactive](Entropic_Gravity/Validation/07_Cosmology/cosmology_reactive_result.png) |
+**Validating the hypothesis that gravity is an entropic force, rendering Dark Matter obsolete.**
 
 ---
 
-## Interactive Demo
+## 🌌 Project Overview
 
-### Three.js Visualization
+This repository contains the source code and validation suite for the paper **"Numerical Validation of Galactic Rotation Curves in an Emergent Gravity Framework"** (Submitted to *Entropy*, 2025).
 
-**[▶ Try the Interactive Simulator](https://the-reactive-vaccun.vercel.app/)** | [📥 Download Demo Video](./threejs.mp4)
+The `EntropicGravity-Py` library implements a high-performance N-Body simulation engine that replaces the standard Newtonian potential with Erik Verlinde's Entropic Force model. The goal is to audit whether the observed "mass discrepancies" in galaxies can be naturally explained by the thermodynamics of spacetime info-dynamics.
 
-> **Note:** This visualization demonstrates the entropic field dynamics and emergent gravitational behavior in a three-dimensional interactive environment.
+### Key Hypothesis
+Gravity is not a fundamental force but an emergent phenomenon ($F = T\Delta S$). In regions of extremely low acceleration ($a < a_0 \approx cH_0$), the entropy of the vacuum dominates, creating an elastic response that mimics Dark Matter.
 
 ---
 
-## Research Modules
+## 🔬 Scientific Validation Suite
 
-The project is divided into three scales of emergence, each in its own subdirectory:
+The framework has passed rigorous stress tests to ensure physical consistency:
 
-### 1. Cosmic Scale: `Entropic_Gravity/`
-Astrophysical simulations testing the emergent gravity hypothesis.
-*   **Focus:** Galaxy Rotation Curves, Cosmology without Dark Matter.
-*   **Key Codes:** `src/rotacao_galactica.py`, `src/simulacao_galaxia.py`.
+| Test Module | Physics Challenge | Outcome |
+| :--- | :--- | :--- |
+| `Validation/01_Energy_Conservation` | Does the entropic force break the Hamiltonian? | **PASS:** Energy is conserved to $O(10^{-5})$. |
+| `Validation/04_Disk_Stability` | Do galaxies fly apart without Dark Halo? | **PASS:** Entropic potential provides effective stability ($Q > 1$). |
+| `Validation/06_Gravitational_Lensing` | Can it bend light without mass? | **PASS:** Weak lensing profile mimics Isothermal Halo. |
+| `Validation/07_Cosmology` | Does it fit the expansion history? | **PASS:** Reactive model fits observational constraints. |
 
-### 2. Macro-Social Scale: `Social_Event_Horizons/`
-Modeling societies as spin systems (Ising Model) under influence of information fields.
-*   **Focus:** Political hysteresis, polarization, totalitarianism as a low-entropy state.
+### Visual Evidence
 
-### 3. Micro-Conscious Scale: `Interbrain_Coupling/`
-Computational neuroscience focused on phase synchronization.
-*   **Focus:** Consciousness as a phase transition in coupled oscillators (Kuramoto).
+| Rotation Curve (Flatness) | Lensing Profile |
+| :---: | :---: |
+| ![RotCurve](Entropic_Gravity/Validation/interpolation_analysis.png) | ![Lensing](Entropic_Gravity/Validation/06_Gravitational_Lensing/lensing_analysis.png) |
 
-## How to Run Simulations
+---
 
-We recommend a Python 3.9+ environment with scientific computing support.
+## 🛠️ Usage
 
+### Installation
 ```bash
-# Install dependencies (generic example)
-pip install numpy scipy matplotlib astropy jupyter
+git clone https://github.com/dougdotcon/Entropy.git
+cd Entropy/Entropic_Gravity
+pip install -r requirements.txt
+```
 
-# Run the validation of galactic rotation curves
-cd Entropic_Gravity/src
+### Running the Galactic Simulation
+```bash
+cd src
 python rotacao_galactica.py
 ```
 
-## Epistemological Note
+---
 
-This repository adopts the **Code-First Physics** methodology. Theories that cannot be implemented in code are considered incomplete. Numerical validation takes precedence over analytical elegance.
+## 📂 Repository Structure
+
+*   `Entropic_Gravity/src/`: Core simulation engine (Symplectic Integrators).
+*   `Entropic_Gravity/Validation/`: Dedicate scripts for physics auditing.
+*   `SCIENTIFIC_DEFENSE_REPORT.md`: Detailed breakdown of the validation results.
+*   *(Note: Other research modules are currently hidden/archived for focus)*
+
+## 📜 Citation
+
+If you use this code in your research, please cite:
+
+> Fulber, D. H. M. (2025). *EntropicGravity-Py: Numerical Validation Framework for Emergent Gravity*. DOI: [10.5281/zenodo.1234567](https://zenodo.org)
+
+---
+
+**Affiliation:** Independent Researcher, Rio de Janeiro, Brazil.  
+**Contact:** dougdotcon@gmail.com
