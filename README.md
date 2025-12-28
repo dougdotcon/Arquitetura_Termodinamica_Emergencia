@@ -58,11 +58,10 @@ Detailed audit scripts and reports are available in: `Entropy/Entropic_Gravity/V
 ## Interactive Demo
 
 ### Three.js Visualization
-Watch the interactive 3D simulation of the thermodynamic architecture in action:
 
-![threejs](threejs.mp4)
+**[▶ Try the Interactive Simulator](https://the-reactive-vaccun.vercel.app/)**
 
-**[Try the Interactive Simulator →](https://the-reactive-vaccun.vercel.app/)**
+[📹 View Demo Video](./threejs.mp4)
 
 > **Note:** This visualization demonstrates the entropic field dynamics and emergent gravitational behavior in a three-dimensional interactive environment.
 
