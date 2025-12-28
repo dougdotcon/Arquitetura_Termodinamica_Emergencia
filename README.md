@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)
 ![Physics](https://img.shields.io/badge/Physics-Computational-purple)
-![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg) 
+![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18078771.svg)
 ![Status](https://img.shields.io/badge/Status-Submitted_for_Review-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
