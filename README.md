@@ -37,7 +37,7 @@ The framework has passed rigorous stress tests to ensure physical consistency:
 
 | Rotation Curve (Flatness) | Lensing Profile |
 | :---: | :---: |
-| ![RotCurve](Entropic_Gravity/Validation/interpolation_analysis.png) | ![Lensing](Entropic_Gravity/Validation/06_Gravitational_Lensing/lensing_analysis.png) |
+| ![RotCurve](Entropic_Gravity/src/results/rotation_curve_comparison.png) | ![Lensing](Entropic_Gravity/Validation/06_Gravitational_Lensing/lensing_analysis.png) |
 
 ---
 
@@ -46,16 +46,16 @@ The framework has passed rigorous stress tests to ensure physical consistency:
 ### Installation
 
 ```bash
-git clone https://github.com/dougdotcon/Entropy.git
-cd Entropy/Entropic_Gravity
+git clone https://github.com/dougdotcon/EntropicGravity-Py.git
+cd EntropicGravity-Py
 pip install -r requirements.txt
 ```
 
 ### Running the Galactic Simulation
 
 ```bash
-cd src
-python rotacao_galactica.py
+cd Entropic_Gravity/src
+python galactic_rotation.py
 ```
 
 ---
@@ -75,5 +75,5 @@ If you use this code in your research, please cite:
 
 ---
 
-**Affiliation:** Independent Researcher, Rio de Janeiro, Brazil.  
+**Affiliation:** UNIVERSIDADE FEDERAL DO RIO DE JANEIRO, Rio de Janeiro, Brazil.  
 **Contact:** <dougdotcon@gmail.com>
