@@ -8,7 +8,5 @@ We replaced fixed $\Omega_{CDM}$ with a reactive term $\Omega_{app} \propto H(z)
 - Reactive Entropic: `122.7` km/s/Mpc
 - Difference: `36.9` km/s/Mpc
 
-## ⚠️ PARTIAL SUCCESS
+## [PARTIAL] PARTIAL SUCCESS
 The model is better than the naive one, but still deviates. Refinement of the alpha coupling constant is needed.
-
-![Reactive Cosmology](cosmology_reactive_result.png)

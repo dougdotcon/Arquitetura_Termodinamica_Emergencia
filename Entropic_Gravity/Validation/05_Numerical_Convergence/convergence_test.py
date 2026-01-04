@@ -60,7 +60,7 @@ def run_sim(dt, steps):
     return np.array(trajectory), np.sqrt(vx**2 + vy**2)
 
 def convergence_audit():
-    print("🔬 RUNNING CONVERGENCE TESTS...")
+    print("RUNNING CONVERGENCE TESTS...")
     
     # Run 1: Base DT
     print(f"Running DT = {DT_BASE}")
@@ -105,7 +105,7 @@ def convergence_audit():
     
     plt.tight_layout()
     plt.savefig("convergence_analysis.png")
-    print("✅ Convergence Plot Saved: convergence_analysis.png")
+    print("[SAVED] Convergence Plot Saved: convergence_analysis.png")
     
     with open("convergence_report.md", "w", encoding='utf-8') as f:
         f.write("# Challenge 5: Numerical Convergence Audit\n\n")
@@ -117,7 +117,7 @@ def convergence_audit():
         f.write(f"- Convergence Ratio: `{convergence_ratio:.2f}`\n\n")
         
         if 1.5 < convergence_ratio < 2.5:
-             f.write("✅ **CONVERGENCE CONFIRMED.** The solver exhibits Order 1 convergence, consistent with Semi-Implicit Euler. "
+             f.write("[SUCCESS] **CONVERGENCE CONFIRMED.** The solver exhibits Order 1 convergence, consistent with Semi-Implicit Euler. "
                      "Observed physics (flat rotation) are robust against time-step refinement.\n")
         else:
              f.write("⚠️ **CONVERGENCE ANOMALY.** The ratio deviates from theoretical expectations. "

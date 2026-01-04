@@ -13,16 +13,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
 
-# Constantes Físicas (SI)
+# Physical Constants (SI)
 G = 6.674e-11
 c = 3.0e8
-a0 = 1.2e-10  # Aceleração de escala de Verlinde
+a0 = 1.2e-10  # Verlinde scale acceleration
 M_sun = 1.989e30
 kpc = 3.086e19
 
 def generate_mass_map(positions, masses, grid_size=100, box_width_kpc=50):
     """
-    Projeta as partículas 3D em uma densidade superficial de massa 2D (Sigma).
+    Project 3D particles into a 2D surface mass density field (Sigma).
     """
     width = box_width_kpc * kpc
     bins = np.linspace(-width/2, width/2, grid_size)
@@ -33,10 +33,10 @@ def generate_mass_map(positions, masses, grid_size=100, box_width_kpc=50):
         bins=bins, weights=masses
     )
     
-    # Suavização (Simula resolução do telescópio)
+    # Apply smoothing (Simulates telescope resolution)
     Sigma = gaussian_filter(Sigma, sigma=1.5)
     
-    # Converter para kg/m^2
+    # Convert to kg/m^2
     area_pixel = (width / grid_size)**2
     Sigma = Sigma / area_pixel
     
@@ -44,27 +44,27 @@ def generate_mass_map(positions, masses, grid_size=100, box_width_kpc=50):
 
 def calculate_deflection_angle(r, M_enclosed):
     """
-    Calcula o ângulo de deflexão (alpha) baseado na massa encerrada.
-    Compara GR padrão vs Entrópica.
+    Calculate deflection angle (alpha) based on enclosed mass.
+    Compares standard GR vs Entropic.
     """
-    # 1. Deflexão Padrão (Einstein)
+    # 1. Standard Deflection (Einstein)
     # alpha = 4GM / (c^2 * r)
     alpha_GR = (4 * G * M_enclosed) / (c**2 * r)
     
-    # 2. Deflexão Entrópica
-    # Na teoria de Verlinde, a gravidade aparente g_ent ~ sqrt(g_N * a0)
-    # A "Massa Aparente" M_app é tal que G*M_app/r^2 = g_ent
+    # 2. Entropic Deflection
+    # In Verlinde's theory, apparent gravity g_ent ~ sqrt(g_N * a0)
+    # "Apparent Mass" M_app is such that G*M_app/r^2 = g_ent
     # M_app = (r^2 / G) * sqrt( (G M / r^2) * a0 ) = r * sqrt(M * a0 / G)
-    # Mas precisamos somar a massa bariônica original também.
+    # But we also need to add the original baryonic mass.
     
     g_newton = (G * M_enclosed) / (r**2)
     
-    # Interpolação suave (verificada no relatório anterior)
+    # Smooth interpolation (verified in previous report)
     g_entropic = np.where(g_newton < a0, 
                           np.sqrt(g_newton * a0), 
                           g_newton)
     
-    # Massa Efetiva que a luz "vê"
+    # Effective Mass that light "sees"
     M_eff = (g_entropic * r**2) / G
     
     alpha_Entropic = (4 * G * M_eff) / (c**2 * r)
@@ -72,43 +72,43 @@ def calculate_deflection_angle(r, M_enclosed):
     return alpha_GR, alpha_Entropic
 
 def run_lensing_simulation():
-    print("🔬 RUNNING GRAVITATIONAL LENSING SIMULATION...")
+    print("RUNNING GRAVITATIONAL LENSING SIMULATION...")
     
-    # Gerar dados sintéticos de uma galáxia (Bojo + Disco)
+    # Generate synthetic data for a galaxy (Bulge + Disk)
     N_particles = 10000
-    r = np.random.exponential(scale=5*kpc, size=N_particles) # Perfil exponencial
+    r = np.random.exponential(scale=5*kpc, size=N_particles) # Exponential profile
     theta = np.random.uniform(0, 2*np.pi, N_particles)
-    z = np.random.normal(0, 0.5*kpc, N_particles) # Disco fino
+    z = np.random.normal(0, 0.5*kpc, N_particles) # Thin disk
 
     x = r * np.cos(theta)
     y = r * np.sin(theta)
     positions = np.column_stack((x, y, z))
     masses = np.ones(N_particles) * (1e11 * M_sun / N_particles) # Galáxia de 10^11 M_sun
 
-    # 1. Gerar Mapa de Massa
+    # 1. Generate Mass Map
     Sigma, bins = generate_mass_map(positions, masses)
     
-    # Array de raios para teste (Evita r=0)
+    # Array of test radii (Avoid r=0)
     radius_kpc = np.linspace(0.1, 25, 50) 
     radius_m = radius_kpc * kpc
 
-    # 2. Calcular Massa Encerrada M(<r)
+    # 2. Calculate Enclosed Mass M(<r)
     M_enclosed = []
     for r_val in radius_m:
-        # Soma massa dentro do raio r_val (Projeção cilíndrica simples)
+        # Sum mass inside radius r_val (Simple cylindrical projection)
         r_particles = np.sqrt(positions[:,0]**2 + positions[:,1]**2)
         mask = r_particles < r_val
         M_enclosed.append(np.sum(masses[mask]))
     M_enclosed = np.array(M_enclosed)
 
-    # 3. Calcular Deflexão
+    # 3. Calculate Deflection
     alpha_GR, alpha_Entropic = calculate_deflection_angle(radius_m, M_enclosed)
 
-    # 4. Visualização
+    # 4. Visualization
     plt.figure(figsize=(10, 6))
     plt.style.use('dark_background')
 
-    # Converter para arcsegundos para realismo astronômico
+    # Convert to arcseconds for astronomical realism
     rad_to_arcsec = 206265
     
     plt.plot(radius_kpc, alpha_GR * rad_to_arcsec, 'w--', label='GR (Baryons Only)', alpha=0.7)
@@ -120,7 +120,7 @@ def run_lensing_simulation():
     plt.grid(True, alpha=0.2)
     plt.legend(fontsize=12)
 
-    # Nota Crítica
+    # Critical Note
     plt.text(10, np.mean(alpha_GR*rad_to_arcsec), 
              "Without Dark Matter,\nGR predicts weak lensing", 
              color='white', fontsize=10)
@@ -130,11 +130,11 @@ def run_lensing_simulation():
 
     plt.tight_layout()
     plt.savefig("lensing_analysis.png")
-    print("✅ Lensing Plot Saved: lensing_analysis.png")
+    print("[SAVED] Lensing Plot Saved: lensing_analysis.png")
     
     # Generate Report
     with open("lensing_report.md", "w", encoding='utf-8') as f:
-        f.write("# Challenge 6: Gravitational Lensing (Optical Audit)\n\n")
+        f.write("# Challenge 6: Gravitational Lensing Audit\n\n")
         f.write("## Hypothesis\n")
         f.write("If Entropic Gravity is real, it must bend light as if 'Dark Matter' were present. "
                 "The bending angle $\\alpha$ should not decay as $1/r$ (Keplerian/Einsteinian) but should stabilize.\n\n")

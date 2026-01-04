@@ -6,22 +6,23 @@
 ![Status](https://img.shields.io/badge/Status-Submitted_for_Review-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-**Validating the hypothesis that gravity is an entropic force, rendering Dark Matter obsolete.**
+**Testing the hypothesis that entropic modifications to gravity can reproduce galactic observables without dark matter halos.**
 
 ---
 
-## 🌌 Project Overview
+## Project Overview
 
 This repository contains the source code and validation suite for the paper **"Numerical Validation of Galactic Rotation Curves in an Emergent Gravity Framework"** (Submitted to *Entropy*, 2025).
 
 The `EntropicGravity-Py` library implements a high-performance N-Body simulation engine that replaces the standard Newtonian potential with Erik Verlinde's Entropic Force model. The goal is to audit whether the observed "mass discrepancies" in galaxies can be naturally explained by the thermodynamics of spacetime info-dynamics.
 
 ### Key Hypothesis
+
 Gravity is not a fundamental force but an emergent phenomenon ($F = T\Delta S$). In regions of extremely low acceleration ($a < a_0 \approx cH_0$), the entropy of the vacuum dominates, creating an elastic response that mimics Dark Matter.
 
 ---
 
-## 🔬 Scientific Validation Suite
+## Scientific Validation Suite
 
 The framework has passed rigorous stress tests to ensure physical consistency:
 
@@ -40,9 +41,10 @@ The framework has passed rigorous stress tests to ensure physical consistency:
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 ### Installation
+
 ```bash
 git clone https://github.com/dougdotcon/Entropy.git
 cd Entropy/Entropic_Gravity
@@ -50,6 +52,7 @@ pip install -r requirements.txt
 ```
 
 ### Running the Galactic Simulation
+
 ```bash
 cd src
 python rotacao_galactica.py
@@ -57,14 +60,14 @@ python rotacao_galactica.py
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
-*   `Entropic_Gravity/src/`: Core simulation engine (Symplectic Integrators).
-*   `Entropic_Gravity/Validation/`: Dedicate scripts for physics auditing.
-*   `SCIENTIFIC_DEFENSE_REPORT.md`: Detailed breakdown of the validation results.
-*   *(Note: Other research modules are currently hidden/archived for focus)*
+* `Entropic_Gravity/src/`: Core simulation engine (Symplectic Integrators).
+* `Entropic_Gravity/Validation/`: Dedicate scripts for physics auditing.
+* `SCIENTIFIC_DEFENSE_REPORT.md`: Detailed breakdown of the validation results.
+* *(Note: Other research modules are currently hidden/archived for focus)*
 
-## 📜 Citation
+## Citation
 
 If you use this code in your research, please cite:
 
@@ -73,4 +76,4 @@ If you use this code in your research, please cite:
 ---
 
 **Affiliation:** Independent Researcher, Rio de Janeiro, Brazil.  
-**Contact:** dougdotcon@gmail.com
+**Contact:** <dougdotcon@gmail.com>

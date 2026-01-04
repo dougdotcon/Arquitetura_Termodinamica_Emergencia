@@ -1,4 +1,4 @@
-# Challenge 6: Gravitational Lensing (Optical Audit)
+# Challenge 6: Gravitational Lensing Audit
 
 ## Hypothesis
 If Entropic Gravity is real, it must bend light as if 'Dark Matter' were present. The bending angle $\alpha$ should not decay as $1/r$ (Keplerian/Einsteinian) but should stabilize.
@@ -8,5 +8,3 @@ The simulation confirms that the Entropic correction applies to the relativistic
 
 ## Conclusion
 ✅ **Lensing Anomaly Resolved.** Entropic Gravity successfully reproduces the 'Dark Matter Lensing Signal' using only Baryonic matter. The theory is consistent with Weak Lensing observations.
-
-![Lensing Analysis](lensing_analysis.png)
