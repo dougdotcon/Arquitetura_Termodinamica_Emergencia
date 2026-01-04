@@ -12,7 +12,7 @@
 
 ## Project Overview
 
-This repository contains the source code and validation suite for the paper **"Numerical Validation of Galactic Rotation Curves in an Emergent Gravity Framework"** (Submitted to *Entropy*, 2025).
+This repository contains the source code and validation suite for the paper **"Numerical Validation of Galactic Rotation Curves in an Emergent Gravity Framework"** (Submitted to *Classical and Quantum Gravity (CQG)*, 2025).
 
 The `EntropicGravity-Py` library implements a high-performance N-Body simulation engine that replaces the standard Newtonian potential with Erik Verlinde's Entropic Force model. The goal is to audit whether the observed "mass discrepancies" in galaxies can be naturally explained by the thermodynamics of spacetime info-dynamics.
 
